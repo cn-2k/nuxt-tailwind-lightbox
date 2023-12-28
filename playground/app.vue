@@ -6,7 +6,7 @@
         target="_blank"
       >Vue Tailwind Lightbox ✨</a>
     </div>
-    <ImageGallery :image-list="imageList" />
+    <NuxtTailwindLightbox :image-list="imageList" />
   </div>
 </template>
 

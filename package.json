@@ -1,10 +1,10 @@
 {
   "name": "nuxt-tailwind-lightbox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tailwind Lightbox component for Nuxt",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cn-2k/vue-tailwind-lightbox.git"
+    "url": "git+https://github.com/cn-2k/nuxt-tailwind-lightbox.git"
   },
   "license": "MIT",
   "type": "module",

@@ -1,4 +1,4 @@
-import { defineNuxtModule, addPlugin, createResolver, installModule, addComponentsDir } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, createResolver, installModule, addComponentsDir, addComponent } from '@nuxt/kit'
 
 // Module options TypeScript inteface definition
 export interface ModuleOptions {
@@ -8,7 +8,7 @@ export interface ModuleOptions {
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'nuxt-tailwind-lightbox',
-    configKey: 'nuxtTailwindLightbox'
+    configKey: 'NuxtTailwindLightbox'
   },
   // Default configuration options of the Nuxt module
   defaults: {
@@ -32,11 +32,18 @@ export default defineNuxtModule<ModuleOptions>({
 
     await installModule('@vueuse/nuxt')
 
-    await addComponentsDir({
-      path: resolver.resolve('./runtime/components'),
-      pathPrefix: false,
-      prefix: '',
-      global: true
+    await addComponent({
+      name: 'NuxtTailwindLightbox',
+      filePath: resolver.resolve('./runtime/components/ImageGallery.vue'),
+      global: true,
     })
+
+    // if more than 1 component avaiable
+    // await addComponentsDir({
+    //   path: resolver.resolve('./runtime/components'),
+    //   pathPrefix: false,
+    //   prefix: '',
+    //   global: true
+    // })
   }
 })

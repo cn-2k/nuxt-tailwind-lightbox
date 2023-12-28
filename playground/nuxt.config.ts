@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
   modules: ['../src/module'],
-  nuxtTailwindLightbox: {
+  NuxtTailwindLightbox: {
     css: true,
-  }
+  },
+  ssr: false,
 })
