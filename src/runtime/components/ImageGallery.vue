@@ -1,20 +1,20 @@
 <template>
-  <div class="main-container">
-    <div class="content-container">
-      <div class="actions-buttons-container">
+  <div class="select-none max-w-[500px] lg:p-4">
+    <div class="flex flex-col justify-center">
+      <div class="relative flex justify-center">
         <img
           :src="imageList[currentIndex]"
           alt="Imagem"
-          class="main-image"
+          class="cursor-pointer sm:rounded-xl"
           @click="openLightbox(currentIndex, currentImage)"
         >
 
         <div v-if="smAndSmaller">
           <div
-            class="action-button-prev"
+            class="absolute left-4 lg:-left-8 bottom-[40%] lg:bottom-[50%] right-0 flex h-6 w-1 cursor-pointer items-center justify-center rounded-full bg-white stroke-zinc-800 p-6 lg:p-9 transition-colors hover:stroke-orange-500;"
             @click="prevImage"
           >
-            <div class="action-button-svg">
+            <div class="flex items-center justify-center">
               <svg
                 width="20"
                 height="25"
@@ -32,10 +32,10 @@
           </div>
 
           <div
-            class="action-button-next"
+            class="absolute right-4 lg:-right-8 bottom-[40%] lg:bottom-[50%] flex h-6 w-1 cursor-pointer items-center justify-center rounded-full bg-white stroke-zinc-800 p-6 lg:p-9 transition-colors hover:stroke-orange-500;"
             @click="nextImage"
           >
-            <div class="action-button-svg">
+            <div class="flex items-center justify-center">
               <svg
                 width="20"
                 height="25"
@@ -56,32 +56,32 @@
     </div>
     <div
       v-if="!loading && smAndLarger"
-      class="image-list-container"
+      class="mt-6 flex items-center gap-4"
       :class="{ 'justify-between': props.imageList.length > 3 }"
     >
       <div
         v-for="(image, index) in props.imageList"
         :key="index"
-        class="image-item"
-        :class="{ 'active-border': currentIndex === index }"
+        class="overflow-hidden rounded-2xl"
+        :class="{ 'border-[3px] border-orange-500': currentIndex === index }"
       >
         <img
           :src="compressedImages[index]"
           alt="image"
-          class="thumbnail-image"
-          :class="{ 'low-opacity': currentIndex === index }"
+          class="cursor-pointer rounded-xl transition-opacity hover:opacity-30"
+          :class="{ 'opacity-30': currentIndex === index }"
           @click="(currentImage = image), (currentIndex = index)"
         >
       </div>
     </div>
     <div
       v-if="loading"
-      class="loading-container"
+      class="mt-4 flex w-full justify-center gap-4"
     >
       <div
         v-for="item in 4"
         :key="item"
-        class="loading-item"
+        class="h-[130px] w-[130px] animate-pulse rounded-lg bg-gray-300"
       />
     </div>
 
@@ -144,97 +144,3 @@ onMounted(() => {
   compressImages();
 });
 </script>
-
-<style lang="postcss" scoped>
-.main-container {
-  @apply select-none max-w-[500px] lg:p-4;
-}
-
-.content-container {
-  @apply flex flex-col justify-center;
-}
-
-.main-image {
-  @apply cursor-pointer sm:rounded-xl;
-}
-
-.image-list-container {
-  @apply mt-6 flex items-center gap-4;
-}
-
-.image-item {
-  @apply overflow-hidden rounded-2xl;
-}
-
-.thumbnail-image {
-  @apply cursor-pointer rounded-xl transition-opacity hover:opacity-30;
-}
-
-.opacity-30 {
-  opacity: 0.3;
-}
-
-.thumb-img-style {
-  @apply w-[120px] cursor-pointer rounded-xl transition-opacity hover:opacity-30;
-}
-
-.thumb-img {
-  @apply rounded-xl bg-white;
-}
-
-.border-active {
-  @apply border-[3px] border-orange-500;
-}
-
-.thumb-img-container {
-  @apply overflow-hidden rounded-2xl;
-}
-
-.place-content-between {
-  place-content: space-between;
-}
-
-.thumb-container {
-  @apply flex w-full justify-center items-center gap-4;
-}
-
-.thumb-subcontainer {
-  @apply w-[500px] flex place-content-center gap-6;
-}
-
-.action-button-prev {
-  @apply absolute left-4 lg:-left-8 bottom-[40%] lg:bottom-[50%] right-0 flex h-6 w-1 cursor-pointer items-center justify-center rounded-full bg-white stroke-zinc-800 p-6 lg:p-9 transition-colors hover:stroke-orange-500;
-}
-
-.action-button-next {
-  @apply absolute right-4 lg:-right-8 bottom-[40%] lg:bottom-[50%] flex h-6 w-1 cursor-pointer items-center justify-center rounded-full bg-white stroke-zinc-800 p-6 lg:p-9 transition-colors hover:stroke-orange-500;
-}
-
-.actions-buttons-container {
-  @apply relative flex justify-center;
-}
-
-.action-button-svg {
-  @apply flex items-center justify-center;
-}
-
-.justify-between {
-  justify-content: space-between;
-}
-
-.active-border {
-  @apply border-[3px] border-orange-500;
-}
-
-.low-opacity {
-  opacity: 0.3;
-}
-
-.loading-container {
-  @apply mt-4 flex w-full justify-center gap-4;
-}
-
-.loading-item {
-  @apply h-[130px] w-[130px] animate-pulse rounded-lg bg-gray-300;
-}
-</style>
