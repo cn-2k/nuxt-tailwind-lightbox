@@ -1,58 +1,46 @@
-<!--
-Get your module up and running quickly.
+<div align="center">
 
-Find and replace all on all files (CMD+SHIFT+F):
-- Name: My Module
-- Package name: my-module
-- Description: My new Nuxt module
--->
+![ezgif-2-e81342282f](https://github.com/cn-2k/vue-tailwind-lightbox/assets/59366705/f6b3f948-2d8a-4886-bb8d-b8b6c786bab0)
 
-# My Module
 
-[![npm version][npm-version-src]][npm-version-href]
-[![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![License][license-src]][license-href]
-[![Nuxt][nuxt-src]][nuxt-href]
+</div>
 
-My new Nuxt module for doing amazing things.
-
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/my-module?file=playground%2Fapp.vue) -->
-<!-- - [📖 &nbsp;Documentation](https://example.com) -->
-
-## Features
-
-<!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+<h1 align=center>Nuxt Tailwind Lightbox ✨</h1>
+<p align=center>A Gallery/Lightbox component styled with TailwindCSS for Nuxt 3 (Typescript included!).</p>
+<p align=center>Based on <a href="https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6" target="_blank">Frontend Mentor E-commerce product page</a> Lightbox.</p>
 
 ## Quick Setup
 
-1. Add `my-module` dependency to your project
+1. Add `nuxt-tailwind-lightbox` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D my-module
+pnpm add -D nuxt-tailwind-lightbox
 
 # Using yarn
-yarn add --dev my-module
+yarn add --dev nuxt-tailwind-lightbox
 
 # Using npm
-npm install --save-dev my-module
+npm install --save-dev nuxt-tailwind-lightbox
 ```
 
-2. Add `my-module` to the `modules` section of `nuxt.config.ts`
+2. Add `nuxt-tailwind-lightbox` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
   modules: [
-    'my-module'
+    'nuxt-tailwind-lightbox'
   ]
 })
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
+## 📃 Props
+
+| Name       | Type               | Default | Description                        |
+| ---------- | ------------------ | ------- | ---------------------------------- |
+| `image-list` | `Array`          |   ---   | Array of images to fill the gallery |
+
+That's it! You can now use the ```<NuxtTailwindLightbox :image-list="your_image_list_array" />``` component in your Nuxt app ✨
 
 ## Development
 
