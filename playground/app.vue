@@ -1,8 +1,8 @@
 <template>
-  <main class="pb-20">
+  <main>
     <header>
       <div>
-        <div class="w-full flex justify-between p-5">
+        <div class="w-full flex justify-between p-4">
           <div class="flex gap-5 justify-center items-center">
             <img
               src="~/assets/images/icon-menu.svg"
@@ -32,21 +32,21 @@
       <h4 class="text-primary-orange uppercase font-bold text-sm tracking-wider">
         Sneaker Company
       </h4>
-      <h1 class="text-3xl font-bold mt-3 text-neutral-very-dark-blue">
+      <h1 class="text-3xl font-bold text-neutral-very-dark-blue">
         Fall Limited Edition Sneakers
       </h1>
-      <p class="mt-4 text-neutral-dark-grayish-blue">
+      <p class="mt-2 text-neutral-dark-grayish-blue">
         These low-profile sneakers are your perfect casual wear companion. featuring a durable rubber outer sole,
         they'll withstand everything the weather can offer.
       </p>
-      <div class="w-full justify-between flex mt-4">
+      <div class="w-full justify-between flex mt-2">
         <div class="flex items-center gap-4">
           <span class="text-3xl font-bold text-neutral-very-dark-blue leading-tight">$125.00</span>
           <span class="text-primary-orange font-bold bg-primary-orange/15 px-3 py-0.5 rounded-lg">50%</span>
         </div>
         <span class="font-bold text-neutral-grayish-blue line-through">$250.00</span>
       </div>
-      <div class="w-full bg-neutral-light-grayish-blue h-0.5 p-6 rounded-lg mt-6 flex justify-between items-center">
+      <div class="w-full bg-neutral-light-grayish-blue h-0.5 p-6 rounded-lg mt-4 flex justify-between items-center">
         <img
           src="~/assets/images/icon-minus.svg"
           alt="Minus"
