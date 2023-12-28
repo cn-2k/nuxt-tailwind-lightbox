@@ -34,13 +34,25 @@ export default defineNuxtConfig({
 })
 ```
 
+3. Add the source files of Nuxt Tailwind Lightbox to the ```tailwind.config.js``` template path:
+
+```js
+module.exports = {
+  content: [
+    // other files...
+    './node_modules/nuxt-tailwind-lightbox/**/*.{js,ts,vue}',
+  ],
+}
+```
+
+That's it! You can now use the ```<NuxtTailwindLightbox :image-list="your_image_list_array" />``` component in your Nuxt app ✨
+
 ## 📃 Props
 
 | Name       | Type               | Default | Description                        |
 | ---------- | ------------------ | ------- | ---------------------------------- |
 | `image-list` | `Array`          |   ---   | Array of images to fill the gallery |
 
-That's it! You can now use the ```<NuxtTailwindLightbox :image-list="your_image_list_array" />``` component in your Nuxt app ✨
 
 ## Development
 
