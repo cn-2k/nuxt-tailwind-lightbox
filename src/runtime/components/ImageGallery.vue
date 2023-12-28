@@ -1,6 +1,6 @@
 <template>
   <div class="select-none max-w-[500px] lg:p-4">
-    <div class="flex flex-col justify-center overflow-hidden h-80 sm:h-full">
+    <div class="flex flex-col justify-center overflow-hidden sm:overflow-auto h-80 sm:h-full">
       <div class="relative flex justify-center">
         <img
           :src="imageList[currentIndex]"
