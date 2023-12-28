@@ -1,6 +1,6 @@
 {
   "name": "nuxt-tailwind-lightbox",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Tailwind Lightbox component for Nuxt",
   "repository": {
     "type": "git",
