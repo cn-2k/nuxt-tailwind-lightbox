@@ -1,5 +1,8 @@
 <template>
-  <div class="select-none max-w-[500px] lg:p-4">
+  <div
+    class="select-none max-w-[500px] lg:p-4"
+    :class="{ 'max-w-full': smAndSmaller }"
+  >
     <div class="flex flex-col justify-center overflow-hidden sm:overflow-auto h-80 sm:h-full">
       <div class="relative flex justify-center">
         <img
@@ -11,7 +14,7 @@
 
         <div v-if="smAndSmaller">
           <div
-            class="absolute left-4 lg:-left-8 bottom-[40%] lg:bottom-[50%] right-0 flex h-6 w-1 cursor-pointer items-center justify-center rounded-full bg-white stroke-zinc-800 p-6 lg:p-9 transition-colors hover:stroke-orange-500;"
+            class="absolute left-4 lg:-left-8 bottom-[50%] lg:bottom-[50%] right-0 flex h-6 w-1 cursor-pointer items-center justify-center rounded-full bg-white stroke-zinc-800 p-6 lg:p-9 transition-colors hover:stroke-orange-500;"
             @click="prevImage"
           >
             <div class="flex items-center justify-center">
@@ -32,7 +35,7 @@
           </div>
 
           <div
-            class="absolute right-4 lg:-right-8 bottom-[40%] lg:bottom-[50%] flex h-6 w-1 cursor-pointer items-center justify-center rounded-full bg-white stroke-zinc-800 p-6 lg:p-9 transition-colors hover:stroke-orange-500;"
+            class="absolute right-4 lg:-right-8 bottom-[50%] lg:bottom-[50%] flex h-6 w-1 cursor-pointer items-center justify-center rounded-full bg-white stroke-zinc-800 p-6 lg:p-9 transition-colors hover:stroke-orange-500;"
             @click="nextImage"
           >
             <div class="flex items-center justify-center">

@@ -2,11 +2,11 @@
   <Transition name="modal">
     <div
       v-if="show"
-      class="fixed z-50 top-0 left-0 w-full h-full bg-black/50 flex transition-opacity duration-[0.3s] ease-linear select-none"
+      class="hidden fixed z-50 top-0 left-0 w-full h-full bg-black/50 sm:flex transition-opacity duration-[0.3s] ease-linear select-none"
       @click="handleMaskClick"
     >
       <div
-        class="modal-container w-[400px] lg:w-[700px] m-auto px-12 py-7 transition-all duration-[0.3s] ease-linear"
+        class="modal-container w-[700px] m-auto px-12 py-7 transition-all duration-[0.3s] ease-linear"
         @click.stop
       >
         <div class="my-5">
